@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../src/img/logo_food-removebg-preview.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVC: HTML-CSS-JS</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500;6..12,600;6..12,700;6..12,800&family=Roboto&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" src="/src/js/main.js" defer></script>
+    <script type="module" src="/src/js/controler.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="" class="header__logo">
+        <img src="./src/img/logo_food-removebg-preview.png" alt="Logo" />
+      </a>
+      <form class="search">
+        <input
+          type="text"
+          class="search__field"
+          placeholder="Search over 1,000,000 recipe"
+        />
+        <button type="submit" class="btn search__btn">
+          <svg class="search__icon">
+            <use href="./src/img/icons.svg#icon-search"></use>
+          </svg>
+          <span>Search</span>
+        </button>
+      </form>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item" id="add-recipe">
+            <button class="nav__btn">
+              <svg class="nav__icon">
+                <use href="./src/img/icons.svg#icon-edit"></use>
+              </svg>
+              <span>Add recipe</span>
+            </button>
+          </li>
+          <li class="nav__item nav__item--bookmark">
+            <button class="nav__btn">
+              <svg class="nav__icon">
+                <use href="./src/img/icons.svg#icon-bookmark"></use>
+              </svg>
+              <span>Bookmarks</span>
+            </button>
+            <ul class="bookmark">
+              <!-- <a class="item" href="">
+                <div class="item__left">
+                  <img
+                    src="https://forkify-api.herokuapp.com/images/epicuriousfacebook511b.png"
+                    alt=""
+                    srcset=""
+                    class="item__img"
+                  />
+                </div>
+                <div class="item__right">
+                  <h2 class="item__name">Sushi rice</h2>
+                  <h3 class="item__desc">Epicurious</h3>
+                </div>
+              </a>
+              <a class="item" href="">
+                <div class="item__left">
+                  <img
+                    src="https://forkify-api.herokuapp.com/images/epicuriousfacebook511b.png"
+                    alt=""
+                    srcset=""
+                    class="item__img"
+                  />
+                </div>
+                <div class="item__right">
+                  <h2 class="item__name">Sushi rice</h2>
+                  <h3 class="item__desc">Epicurious</h3>
+                </div>
+              </a> -->
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="sidebar">
+        <div class="items">
+          <!-- <div class="loading">
+            <svg class="loading__icon">
+              <use href="./src/img/icons.svg#icon-loader"></use>
+            </svg>
+          </div>
+          <div class="message message--warning">
+            <svg class="message__icon">
+              <use href="./src/img/icons.svg#icon-alert-triangle"></use>
+            </svg>
+            <div class="message__content">
+              No recipes found for your query! Please try again ;)
+            </div>
+          </div> -->
+          <!-- <a class="item" href="">
+            <div class="item__left">
+              <img
+                src="https://forkify-api.herokuapp.com/images/epicuriousfacebook511b.png"
+                alt=""
+                srcset=""
+                class="item__img"
+              />
+            </div>
+            <div class="item__right">
+              <h2 class="item__name">Sushi rice</h2>
+              <h3 class="item__desc">Epicurious</h3>
+            </div>
+          </a>
+          <a class="item">
+            <div class="item__left">
+              <img
+                src="https://forkify-api.herokuapp.com/images/epicuriousfacebook511b.png"
+                alt=""
+                srcset=""
+                class="item__img"
+              />
+            </div>
+            <div class="item__right">
+              <h2 class="item__name">Sushi rice</h2>
+              <h3 class="item__desc">Epicurious</h3>
+            </div>
+          </a> -->
+        </div>
+        <div class="pagination">
+          <!-- <div class="pagination__left">
+            <svg class="pagination__icon">
+              <use href="./src/img/icons.svg#icon-arrow-left"></use>
+            </svg>
+            <span> Page 1 </span>
+          </div>
+          <div class="pagination__push"></div>
+          <div class="pagination__right">
+            <span> Page 3 </span>
+            <svg class="pagination__icon">
+              <use href="./src/img/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </div> -->
+        </div>
+        <span class="copyright"> quannar178@gmail.com </span>
+      </div>
+      <div class="content">
+        <div class="message">
+          <svg class="message__icon">
+            <use href="./src/img/icons.svg#icon-search"></use>
+          </svg>
+          <div class="message__content">
+            Start by searching for a recipe or an ingredient. Have fun!
+          </div>
+        </div>
+        <!-- <figure class="banner">
+          <img
+            src="http://forkify-api.herokuapp.com/images/2612293997.jpg"
+            alt=""
+            class="banner__img"
+          />
+          <h1 class="banner__name">Mon's sushi rice</h1>
+        </figure>
+        <div class="custom">
+          <div class="custom__info">
+            <svg class="custom__icon">
+              <use href="./src/img/icons.svg#icon-clock"></use>
+            </svg>
+            <span class="custom__number">30</span>
+            <span> minutes</span>
+          </div>
+          <div class="custom__info">
+            <svg class="custom__icon">
+              <use href="./src/img/icons.svg#icon-users"></use>
+            </svg>
+            <span class="custom__number">30</span>
+            <span> SERVINGS</span>
+            <svg class="custom__icon custom__icon--clickable">
+              <use href="./src/img/icons.svg#icon-minus-circle"></use>
+            </svg>
+            <svg class="custom__icon custom__icon--clickable">
+              <use href="./src/img/icons.svg#icon-plus-circle"></use>
+            </svg>
+          </div>
+          <div class="custom_bookmark">
+            <svg class="custom__icon">
+              <use href="./src/img/icons.svg#icon-bookmark"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="ingredient">
+          <div class="ingredient__title">recipe ingredients</div>
+          <div class="ingredient__items">
+            <div class="ingredient__item">
+              <svg class="ingredient_icon">
+                <use href="./src/img/icons.svg#icon-check"></use>
+              </svg>
+              <span class="ingredient__text"
+                >2 cups short-grain white rice</span
+              >
+            </div>
+            <div class="ingredient__item">
+              <svg class="ingredient_icon">
+                <use href="./src/img/icons.svg#icon-check"></use>
+              </svg>
+              <span class="ingredient__text"
+                >2 cups short-grain white rice</span
+              >
+            </div>
+            <div class="ingredient__item">
+              <svg class="ingredient_icon">
+                <use href="./src/img/icons.svg#icon-check"></use>
+              </svg>
+              <span class="ingredient__text"
+                >2 cups short-grain white rice</span
+              >
+            </div>
+            <div class="ingredient__item">
+              <svg class="ingredient_icon">
+                <use href="./src/img/icons.svg#icon-check"></use>
+              </svg>
+              <span class="ingredient__text"
+                >2 cups short-grain white rice</span
+              >
+            </div>
+            <div class="ingredient__item">
+              <svg class="ingredient_icon">
+                <use href="./src/img/icons.svg#icon-check"></use>
+              </svg>
+              <span class="ingredient__text"
+                >2 cups short-grain white rice</span
+              >
+            </div>
+            <div class="ingredient__item">
+              <svg class="ingredient_icon">
+                <use href="./src/img/icons.svg#icon-check"></use>
+              </svg>
+              <span class="ingredient__text"
+                >2 cups short-grain white rice</span
+              >
+            </div>
+            <div class="ingredient__item">
+              <svg class="ingredient_icon">
+                <use href="./src/img/icons.svg#icon-check"></use>
+              </svg>
+              <span class="ingredient__text"
+                >2 cups short-grain white rice</span
+              >
+            </div>
+            <div class="ingredient__item">
+              <svg class="ingredient_icon">
+                <use href="./src/img/icons.svg#icon-check"></use>
+              </svg>
+              <span class="ingredient__text"
+                >2 cups short-grain white rice</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="direction">
+          <div class="direction__title">HOW TO COOK IT</div>
+          <span class="direction__content">
+            This recipe was carefully designed and tested by Epicurious. Please
+            check out directions at their website.
+          </span>
+          <button class="direction__button">
+            <span>Directions</span>
+            <svg class="direction__icon">
+              <use href="./src/img/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+        </div> -->
+      </div>
+      <div class="modal hidden" id="modal">
+        <div class="modal__content">
+          <button class="modal__close">x</button>
+          <form class="modal__body">
+            <div class="recipe">
+              <div class="recipe__title">recipe data</div>
+              <div class="recipe__field">
+                <label for="title" class="recipe__lable">Title</label>
+                <input
+                  name="title"
+                  type="text"
+                  class="recipe__input"
+                  value="Title"
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="description" class="recipe__lable"
+                  >Description</label
+                >
+                <input
+                  name="description"
+                  type="text"
+                  class="recipe__input"
+                  value="URL"
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="url" class="recipe__lable">Image URL</label>
+                <input
+                  name="url"
+                  type="text"
+                  class="recipe__input"
+                  value="Image"
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="publisher" class="recipe__lable">Publisher</label>
+                <input
+                  name="publisher"
+                  type="text"
+                  class="recipe__input"
+                  value="Publisher"
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="prep" class="recipe__lable">Prep time</label>
+                <input
+                  name="prep"
+                  type="number"
+                  class="recipe__input"
+                  value="60"
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="servings" class="recipe__lable">Servings</label>
+                <input
+                  name="servings"
+                  type="number"
+                  class="recipe__input"
+                  value="4"
+                />
+              </div>
+            </div>
+            <div class="recipe">
+              <div class="recipe__title">recipe data</div>
+              <div class="recipe__field">
+                <label for="ingredient1" class="recipe__lable"
+                  >Ingredient 1</label
+                >
+                <input
+                  name="ingredient1"
+                  type="text"
+                  class="recipe__input"
+                  value="0.5,kg,Rice"
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="ingredient2" class="recipe__lable"
+                  >Ingredient 2</label
+                >
+                <input
+                  name="ingredient2"
+                  type="text"
+                  class="recipe__input"
+                  value="1,,Avocado"
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="ingredient3" class="recipe__lable"
+                  >Ingredient 3</label
+                >
+                <input
+                  name="ingredient3"
+                  type="text"
+                  class="recipe__input"
+                  value=",,salt"
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="ingredient4" class="recipe__lable"
+                  >Ingredient 4</label
+                >
+                <input
+                  name="ingredient4"
+                  type="text"
+                  class="recipe__input"
+                  value=""
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="ingredient5" class="recipe__lable"
+                  >Ingredient 5</label
+                >
+                <input
+                  name="ingredient5"
+                  type="text"
+                  class="recipe__input"
+                  value=""
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="ingredient6" class="recipe__lable"
+                  >Ingredient 6</label
+                >
+                <input
+                  name="ingredient6"
+                  type="text"
+                  class="recipe__input"
+                  value=""
+                />
+              </div>
+              <div class="recipe__field">
+                <label for="ingredient7" class="recipe__lable"
+                  >Ingredient 7</label
+                >
+                <input
+                  name="ingredient7"
+                  type="text"
+                  class="recipe__input"
+                  value=""
+                />
+              </div>
+            </div>
+            <button type="submit" class="modal__button">
+              <svg class="direction__icon">
+                <use href="./src/img/icons.svg#icon-upload-cloud"></use>
+              </svg>
+              <span>Upload</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
